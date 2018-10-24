@@ -76,4 +76,38 @@
       return false;
     }
   }
+
+  // check if the two password match
+  if (password.value != password_confirmation.value) {
+    password.style.border = "1px solid red";
+    password_confirmation.style.border = "1px solid red";
+    password_error.innerHTML = "The two passwords do not match";
+    return false;
+  }
+
+// event handler functions
+function nameVerify() {
+  if (username.value != "") {
+    username.style.border = "1px solid #5E6E66";
+    name_error.innerHTML = "";
+    return true;
+  }
+}
+
+function emailVerify() {
+  if (email.value != "") {
+    email.style.border = "1px solid #5E6E66";
+    email_error.innerHTML = "";
+    return true;
+  }
+}
+
+function passwordVerify() {
+  if (password.value != "") {
+    password.style.border = "1px solid #5E6E66";
+    password_error.innerHTML = "";
+    return true;
+  }
+}
+
 </script>
