@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Form Validation</title>
+  <meta charset="utf-8">
+	<title>Form Validation with JavaScript</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 <div id="wrapper">
   <form method="POST" action="index.php" onsubmit="return Validate()" name="vform">
-  	<div>
-  	  <input type="text" name="username" class="textInput" placeholder="Username">
-  	  <div id="name_error" class="val_error"></div>
+  	<div id="username_div">
+      <label>Username</label> <br>
+  	  <input type="text" name="username" class="textInput">
+  	  <div id="name_error"></div>
   	</div>
-  	<div>
-  	  <input type="email" name="email" class="textInput" placeholder="Email">
-  	  <div id="email_error" class="val_error"></div>
+
+  	<div id="email_div">
+      <label>Email</label> <br>
+  	  <input type="email" name="email" class="textInput">
+  	  <div id="email_error"></div>
   	</div>
-  	<div>
-  	  <input type="password" name="password" class="textInput" placeholder="Password">
+
+  	<div id="password_div">
+      <label>Password</label> <br>
+  	  <input type="password" name="password" class="textInput">
   	</div>
-  	<div>
-  	  <input type="password" name="password_confirmation" class="textInput" placeholder="Password confirmation">
-  	  <div id="password_error" class="val_error"></div>
+
+  	<div id="pass_confirm_div">
+      <label>Password confirm</label> <br>
+  	  <input type="password" name="password_confirm" class="textInput">
+  	  <div id="password_error"></div>
   	</div>
+
   	<div>
-  	  <input type="submit" value="Register" class="btn" name="register">
+  	  <input type="submit" name="register" value="Register" class="btn">
   	</div>
   </form>	
 </div>
 
 </body>
 </html>
-
+<script type="scripts.js"></script>
 <!-- JAVASCRIPT -->
 <script type="text/javascript">
   // GETTING ALL INPUT TEXT OBJECTS
