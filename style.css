@@ -1,27 +1,28 @@
 #wrapper {
   width: 35%;
   margin: 50px auto;
-  padding: 20px;
-  background: #efffe0;
+  padding: 50px;
+  background: #D7FBFF;
 }
 
 form {
-  width: 50%;
-  margin: 100px auto;
+  margin: 30px auto;
+}
+
+.textInput {
+  border: none;
+  height: 28px;
+  margin: 2px;
+  font-size: 16px;
+  padding: 1px;
+  width: 100%;
 }
 
 form div {
   margin: 3px auto;
 }
 
-.textInput {
-  margin-top: 2px;
-  height: 28px;
-  border: 1px solid #5e6e66;
-  font-size: 16px;
-  padding: 1px;
-  width: 100%;
-}
+
 
 .btn {
   padding: 7px;
