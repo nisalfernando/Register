@@ -15,3 +15,30 @@ email.addEventListener('blur', emailVerify, true);
 password.addEventListener('blur', passwordVerify, true);
 
 // Validation function
+function Validate() {
+  // Validate username
+  if (username.value == "") {
+  	username.style.border = "1px solid red";
+  	document.getElementById('username_div').style.color = "red";
+  	name_error.textContent = "Username is required";
+  	username.focus();
+  	return false;
+  }
+  // Validate username
+  if (username.value.length < 3) {
+  	username.style.border = "1px solid red";
+  	document.getElementById("username_div").style.color = "red";
+  	name_error.textContent = "Username must be at least 3 characters";
+  	username.focus();
+  	return false;
+  }
+
+  // Validate email
+  if (email.value == "") {
+  	email.style.border = "1px solid red";
+  	document.getElementById("email_div").style.color = "red";
+  	email_error.textContent = "Email is required";
+  	email.focus();
+  	return false;
+  }
+}
