@@ -41,4 +41,55 @@ function Validate() {
   	email.focus();
   	return false;
   }
+  // Validate password
+  if (password.value == "") {
+  	password.style.border = "1px solid red";
+  	document.getElementById("password_div").style.color = "red";
+  	password_confirm.style.border = "1px solid red";
+  	password_error.textContent = "password is required";
+  	password.focus();
+  	return false;
+  }
+  // Check if the two passwords match
+  if (password.value != password_confirm.value) {
+  	password.style.border = "1px solid red";
+  	document.getElementById("pass_confirm_div").style.color = "red";
+  	password_confirm.style.border = "1px solid red";
+  	password_error.innerHTML = "The two password do not match";
+  	return false;
+  }
+}
+// Event handler functions
+function nameVerify() {
+  if (username.value != "") {
+  	username.style.border = "1px solid #5e6e66";
+  	document.getElementById("username_div").style.border = "#5e6e66";
+  	name_error.innerHTML = "";
+  	return true;
+  }
+}
+
+function emailVerify() {
+  if (email.value != "") {
+  	email.style.border = "1px solid #5e6e66";
+  	document.getElementById("email_div").style.color = "#5e6e66";
+  	email_error.innerHTML = "";
+  	return true;
+  }
+}
+
+function passwordVerify() {
+  if (password.value != "") {
+    password.style.border = "1px solid #5e6e66";
+    document.getElementById("pass_confirm_div").style.color = "#5e6e66";
+    document.getElementById("password_div").style.color = "#5e6e66";
+    password_error.innerHTML = "";
+    return true;
+  }
+  if (password.value === password_confirm.value) {
+  	password.style.border = "1px solid #5e6e66";
+  	document.getElementById("pass_confirm_div").style.color = "#5e6e66";
+  	password_error.innerHTML = "";
+  	return true;
+  }
 }
